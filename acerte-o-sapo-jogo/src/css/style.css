@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;600;700&display=swap');
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url("../font/PressStart2P-Regular.ttf");
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Press Start 2P';
 }
 
 .container {
@@ -28,13 +31,13 @@
 
 .menu h2 {
     color: #e02828;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
 }
 
 .menu h2 + h2 {
     color: #000000;
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 3px;
     font-weight: 700;
 }
@@ -70,4 +73,43 @@
     background-size: 100px, 200px;
     background-repeat: no-repeat;
     background-position: 24px 20px, 0;
+    cursor: pointer;
+}
+
+.enemy:active {
+    filter: hue-rotate(240deg) saturate(150%);
+}
+
+/* Game Over */
+.game-over {
+    position:relative;
+    top: -60%;
+    right: -40%;
+    background-color: #f2f2c7;
+    padding: 30px;
+    width: 300px;
+    border-bottom: 5px solid #ffd700;
+
+    display: none;
+}
+
+.game-over h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff0000;
+}
+
+.game-over p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    margin: 5px 0;
+}
+
+.game-over ol {
+    list-style: none;
+    margin: 15px 0;
+    font-size: 15px;
 }
