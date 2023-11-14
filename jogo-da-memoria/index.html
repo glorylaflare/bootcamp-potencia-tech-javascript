@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦉 Emojimória</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Jogo da Memória</h2>
+        <div class="game"></div>
+        <div class="infos">
+            <button class="reset" onclick="window.location.reload()">
+                <i class="fa-solid fa-rotate-left"></i>
+                Reset
+            </button>
+            <div class="timer">
+                <div class="timer-info">
+                    <p id="countdown">00:00</p>
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                        Timer
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="end-game"></div>
+    </div>
+    <script src="https://kit.fontawesome.com/8265838916.js" crossorigin="anonymous"></script>
+    <script defer src="./src/js/index.js"></script>
+</body>
+</html>

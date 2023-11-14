@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@300;400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #21bdee 5%, #1a2edd 95%);
+    user-select: none;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: #ffffff;
+    padding: 30px 30px;
+    color: #202020;
+    border-radius: 0 60px/600px;
+}
+
+h2 {
+    font-family: 'Monoton', sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-bottom: 1px solid #000000;
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    gap: 50px;
+}
+
+.reset {
+    padding: 10px 15px;
+    width: 50%;
+    margin-left: 15px;
+    background-color: #b02fd7;
+    border: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: 2px 2px 4px #a5a5a5;
+
+}
+
+.reset:active {
+    color: #b02fd7;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+}
+
+.timer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.timer-info span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;    
+}
+
+.timer-info span i {
+    font-size: 14px;
+}
+
+.timer {
+    font-size: 35px;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.timer span {
+    display: flex;
+    font-weight: 400;
+    font-size: 13px;
+    justify-content: flex-end;
+}
+
+.game {
+    width: 550px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    font-size: 3.5em;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+    border: 1px solid #eaeaea;
+    box-shadow: -1px 1px 2px #a5a5a5;
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("https://www.freeiconspng.com/thumbs/owl-icon/owl-icon-0.png"), linear-gradient(150deg, rgba(74,237,231,1) 5%, rgba(41,204,199,1) 95%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch::after {
+    transform: rotateY(180deg);
+}
+
+/* Winner Screen */
+
+.end-game {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    padding: 20px 20px;
+    border: 1px solid #eaeaea;
+    box-shadow: 2px 2px 4px #a5a5a5;
+}
+
+.end-game h2 {
+    color: #21bdee;
+    border: none;
+}
+
+.end-game p {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.end-game p + p {
+    font-size: 15px;
+}
