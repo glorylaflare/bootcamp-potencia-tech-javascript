@@ -1,7 +1,7 @@
 const pianoKeys = document.querySelectorAll(".piano-teclas .teclas");
 const volumeInput = document.getElementById("volume-range");
 const keysToggle = document.getElementById("teclas-toggle");
-let audio = new Audio("src/sounds/a.wav");
+let audio = new Audio();
 
 function playSound(key) {
     audio.src = `src/sounds/${key}.wav`
