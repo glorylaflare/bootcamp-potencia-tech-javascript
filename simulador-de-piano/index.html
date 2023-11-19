@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎹 Virtual Piano</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="speaker"></div>
+            <div class="inner-container">
+                <h2 class="title">Virtual Piano</h2>
+                <div class="presets">
+                    <div class="volume">
+                        <span>Volume</span>
+                        <input type="range" 
+                        name="volume" 
+                        id="volume-range"
+                        min="0"
+                        max="1"
+                        value=".5"
+                        step=".1"
+                        >
+                    </div>
+                    <div class="toggle">
+                        <span>Teclas</span>
+                        <input type="checkbox" 
+                        name="toggle" 
+                        id="teclas-toggle" 
+                        checked>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker"></div>
+        </header>
+        <div>
+            <ul class="piano-teclas">
+                <li class="teclas white" data-key="a"><span>a</span></li>
+                <li class="teclas black" data-key="w"><span>w</span></li>
+                <li class="teclas white" data-key="s"><span>s</span></li>
+                <li class="teclas black" data-key="e"><span>e</span></li>
+                <li class="teclas white" data-key="d"><span>d</span></li>
+                <li class="teclas black" data-key="f"><span>f</span></li>
+                <li class="teclas white" data-key="t"><span>t</span></li>
+                <li class="teclas black" data-key="g"><span>g</span></li>
+                <li class="teclas white" data-key="y"><span>y</span></li>
+                <li class="teclas black" data-key="h"><span>h</span></li>
+                <li class="teclas white" data-key="u"><span>u</span></li>
+                <li class="teclas black" data-key="j"><span>j</span></li>
+                <li class="teclas white" data-key="k"><span>k</span></li>
+                <li class="teclas black" data-key="o"><span>o</span></li>
+                <li class="teclas white" data-key="l"><span>l</span></li>
+                <li class="teclas black" data-key="p"><span>p</span></li>
+                <li class="teclas white" data-key=";"><span>;</span></li>
+            </ul>
+        </div>
+    </div>
+    <script src="./src/js/index.js"></script>
+</body>
+</html>

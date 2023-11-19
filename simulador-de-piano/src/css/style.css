@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(142, 237, 243);
+    height: 100vh;
+    margin: auto;
+    color: rgb(203, 203, 203);
+}
+
+.container {
+    width: 780px;
+    height: 370px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 80px 80px 30px 30px;
+    background-color: black;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.speaker {
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color: #282828;
+    background-size: 16px 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgb(22, 22, 22);
+}
+
+.inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inner-container .presets {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.volume, .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.volume input {
+    accent-color: white;
+}
+
+.toggle input {
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    border-radius: 30px;
+    background-color: #4b4b4b;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle input::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #8c8c8c;
+    position: absolute;
+    border-radius: inherit;
+    top: 50%;
+    left: 0.3rem;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.toggle input:checked::before {
+    left: 2.1rem;
+    background-color: white;
+}
+
+.piano-teclas {
+    display: flex;
+    margin-top: 30px;
+}
+
+.piano-teclas .teclas {
+    cursor: pointer;
+    list-style: none;
+    color: #a2a2a2;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.piano-teclas .white {
+    width: 70px;
+    height: 230px;
+    background: linear-gradient(rgb(255, 255, 255) 95%, rgb(229, 229, 229) 5%);
+    border-radius: 10px;
+    border: 1px solid rgb(23, 23, 23);
+    box-shadow: inset 0px 10px 0 rgba(0, 0, 0, .2);
+}
+
+.piano-teclas .black {
+    width: 50px;
+    height: 160px;
+    z-index: 2;
+    margin: 0 -25px 0 -25px;
+    background: linear-gradient(rgb(26, 26, 26) 95%, rgb(11, 11, 11) 5%);
+    border: 1px solid rgb(23, 23, 23);
+    border-radius: 0 0 10px 10px;
+    box-shadow: inset 0px 10px 0 rgba(0, 0, 0, .2);
+}
+
+.piano-teclas span {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.piano-teclas .teclas.white.active {
+    height: 223px;
+    transform: scale(.98, 1);
+}
+
+.piano-teclas .teclas.black.active {
+    height: 153px;
+    transform: scale(.991, 1);
+}
+
+.teclas.hide span {
+    display: none;
+}
+
+.amplify {
+    transform: scale(1.1);
+}
