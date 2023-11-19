@@ -34,14 +34,10 @@ document.addEventListener("keydown", (e) => {
     });
 });
 
-function handleVolume(e) {
+volumeInput.addEventListener("input", (e) => {
     audio.volume = e.target.value;
-};
+});
 
-volumeInput.addEventListener("input", handleVolume);
-
-function hideKeys() {
-    pianoKeys.forEach((key) => key.classList.toggle("hide"));
-};
-
-keysToggle.addEventListener("click", hideKeys);
+keysToggle.addEventListener("click", () => {
+    pianoKeys.forEach((key) => key.classList.toggle("hide"))
+});
