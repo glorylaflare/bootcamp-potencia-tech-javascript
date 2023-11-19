@@ -9,3 +9,7 @@ A ideia do jogo é clicar no sapo, no momento em que ele aparece em um dos quadr
 ## Sobre o projeto...
 
 O projeto foi desenvolvido em Javascript com HTML e CSS, é um minigame de web browser e possui apenas interface para desktop. As imagens foram retidadas da internet, sem uma fonte específica, e os áudios foram retirados do [mixkit](https://mixkit.co/free-sound-effects/).
+
+## Imagem do projeto
+
+![Alt text](./src/images/screencapture-127-0-0-1-5500-acerte-o-sapo-jogo-index-html-2023-11-19-10_50_27.png)
